@@ -1,0 +1,71 @@
+% beamer theme
+\usetheme{Luebeck}
+\useinnertheme{circles}
+\usecolortheme{simula} % Simula UiB colors
+\usefonttheme[onlymath]{serif} % standard LaTeX font for math
+\usefonttheme{sourcepro} % Simula UiB fonts
+
+% font theme
+\setbeamerfont{title}{size=\huge,series=\bfseries,parent=structure}
+\setbeamerfont{block body}{}
+\setbeamerfont{block body alerted}{}
+\setbeamerfont{block body example}{}
+\setbeamerfont{block title}{size=\large,parent={structure,block body}}
+\setbeamerfont{block title alerted}{parent={block title,alerted text}}
+\setbeamerfont{block title example}{parent={block title,example text}}
+
+% itemize font
+% \setbeamerfont{item}{parent=structure}
+% \setbeamerfont{subitem}{parent=item}
+% \setbeamerfont{subsubitem}{parent=subitem}
+
+% \setbeamerfont{item projected}{size=\tiny,parent={item,projected text}}
+% \setbeamerfont{subitem projected}{parent=item projected}
+% \setbeamerfont{subsubitem projected}{parent=subitem projected}
+
+% \setbeamerfont{itemize item}{parent=item}
+% \setbeamerfont{itemize subitem}{parent=subitem}
+% \setbeamerfont{itemize subsubitem}{parent=subsubitem}
+
+% \setbeamerfont{enumerate item}{parent=item}
+% \setbeamerfont{enumerate subitem}{parent=subitem}
+% \setbeamerfont{enumerate subsubitem}{parent=subsubitem}
+
+% \setbeamerfont{itemize/enumerate body}{}
+% \setbeamerfont{itemize/enumerate subbody}{size=\small}
+% \setbeamerfont{itemize/enumerate subsubbody}{size=\footnotesize}
+
+% define footer
+\setbeamertemplate{footline}
+{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.2cm
+      plus1fill,center] {author in head/foot}%
+      \usebeamerfont{author in head/foot} \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.23\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\insertshorttitle
+    \end{beamercolorbox}}%
+    \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,
+      rightskip=.3cm]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1.125ex,right,rightskip=.2cm]{section in head/foot}%
+      \hspace*{2ex} 
+      {%
+        \vspace*{-1mm}%
+        \includegraphics[scale=0.04, trim=0 -2cm 0 0]{./theme_figures/pdf/Emblem_blaa.pdf}%
+      }%
+    \end{beamercolorbox}
+  \vskip0pt%
+}
+
+% define header
+\setbeamertemplate{headline}{}
+
+% make covered text faded instead of invisible
+\setbeamercovered{invisible}
+
+% disable mouse navigation bar
+\beamertemplatenavigationsymbolsempty

@@ -1,0 +1,74 @@
+\documentclass[
+% table,
+% compress,
+% usenames,
+% dvipsnames,
+% aspectratio=169,
+9pt, % font size
+% draft, % consider using this for speed
+ handout, % remove the overlays
+% t, % place stuff at the top instead of at the center
+]{beamer}
+\input{./theme.tex}
+\input{./packages.tex}
+\input{./macros.tex}
+
+% print references in the ieee style and references like Author et al. (year)
+\bibliographystyle{IEEEtranN}
+\setcitestyle{apalike}
+
+% setup title frame
+\title[Distributed Coded Computing]{Distributed Coded Computing}
+\author[A.~Graell~i~Amat, E. Rosnes, A. Severinson]{
+  Alexandre~Graell~i~Amat$^{\dagger \ddagger}$,
+  Eirik~Rosnes$^\ddagger$, and
+  Albin~Severinson$^\ddagger$
+}
+\institute[Chalmers University of Technology and Simula UiB]{
+  \normalsize{
+    $\dagger$Chalmers University of Technology, Gothenburg, Sweden\\
+    $\ddagger$Simula UiB, Bergen, Norway
+  }
+
+  \vspace*{5mm}{
+    \includegraphics[width=0.4\textwidth]{./theme_figures/pdf/MainLogo_Blaa.pdf}
+  }\vspace*{5mm}
+}
+\date{
+  GLOBECOM Tutorial\\
+  ~\\Waikoloa, HI\\December 13, 2019
+}
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\fi
+
+\begin{document}
+
+% title frame
+\begin{frame}[plain, c, noframenumbering]
+  \begin{center}
+    \titlepage
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frame title}
+  \center \Huge Content 
+
+  \vspace{2cm}
+  \normalsize \cite{Severinson2018tcom}
+\end{frame}
+
+\begin{frame}[t,allowframebreaks]
+  \frametitle{References}
+  \tiny{\bibliography{./manuscript.bib}}
+\end{frame}
+
+\end{document}
