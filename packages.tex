@@ -10,6 +10,7 @@
 \usepackage{xspace}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{ctable}
 \usepackage{mathtools}
@@ -22,9 +23,8 @@
 \usepackage{bm} % bold math
 \usepackage{csquotes} % context-sensitive quotation
 \usepackage{balance} % balance columns on the final page
-\usepackage{cite} % sorted references etc.
 \usepackage{addlines} % add/remove lines from length of a page
-\usepackage[square]{natbib} % use separate citation and bibliography styles
+\usepackage[square,sort]{natbib} % use separate citation and bibliography styles
 \usepackage[normalem]{ulem}
 \usepackage{comment}
-
+\usepackage{standalone} % subfile support

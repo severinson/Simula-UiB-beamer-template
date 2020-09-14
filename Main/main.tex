@@ -1,0 +1,88 @@
+\documentclass[
+% table,
+% compress,
+% usenames,
+% dvipsnames,
+% aspectratio=169,
+9pt, % font size
+% draft, % consider using this for speed
+ handout, % remove the overlays
+% t, % place stuff at the top instead of at the center
+]{beamer}
+\usepackage{import}
+\usepackage{graphicx}
+\input{../theme.tex}
+\input{../packages.tex}
+\input{../macros.tex}
+
+% print references in the ieee style and references like Author et al. (year)
+\bibliographystyle{IEEEtranN}
+\setcitestyle{apalike}
+
+% setup title frame
+\title[Main module]{Main Module of the Project}
+\author[A. Severinson]{Albin~Severinson}
+\institute[Simula UiB]{
+  \normalsize{Simula UiB, Bergen, Norway}
+
+  \vspace*{5mm}{
+    \includegraphics[width=0.4\textwidth]{../theme_figures/pdf/MainLogo_Blaa.pdf}
+  }\vspace*{5mm}
+}
+\date{
+Beamer Template\\
+~\\September 14, 2020
+}
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\fi
+
+\begin{document}
+
+% title frame
+\begin{frame}[plain, c, noframenumbering]
+  \begin{center}
+    \titlepage
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frame title}
+  \center \Huge Main module content
+
+  \vspace{2cm}
+  \normalsize%
+  Reference:~\cite{Severinson2018tcom}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{../Figures/file_extensions.png}
+    \caption{Figure include from main.tex}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tikz figure include from main.tex}
+
+  \begin{figure}
+    \input{../ExampleFigure/examplefigure.tex}
+  \end{figure}
+\end{frame}
+
+% Import the submodule
+\subimport{../Submodule}{submodule.tex}
+
+\begin{frame}[t,allowframebreaks]
+  \frametitle{References}
+  \tiny{\bibliography{../manuscript}}
+\end{frame}
+
+\end{document}
